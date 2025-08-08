@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Quiz Review</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 40px;
             background-color: #f4f6f8;
-        }
-        h1, h2 {
             color: #333;
+        }
+        h1, h2, h3 {
+            margin-bottom: 10px;
         }
         .correct { color: green; }
         .incorrect { color: red; }
@@ -18,7 +21,7 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            box-shadow: 0 0 10px rgba(0,0,0,0.08);
             margin-bottom: 30px;
         }
         .summary {
@@ -37,6 +40,9 @@
             color: red;
             font-weight: bold;
         }
+        .actions {
+            margin-top: 20px;
+        }
         .actions a {
             display: inline-block;
             margin: 10px;
@@ -46,6 +52,7 @@
             text-decoration: none;
             border-radius: 6px;
             font-size: 16px;
+            transition: background-color 0.2s ease;
         }
         .actions a:hover {
             background-color: #005A9E;
@@ -54,11 +61,20 @@
             margin: 8px 0;
             padding-left: 20px;
         }
+        @media (max-width: 600px) {
+            body {
+                margin: 20px;
+            }
+            .actions a {
+                font-size: 14px;
+                padding: 10px 16px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <div class="summary">
+    <section class="summary">
         <h1>Quiz Complete 🎉</h1>
         <h2>Score: {{ score }} / {{ total }} ({{ percentage }}%)</h2>
         <p>Status:
@@ -72,40 +88,38 @@
             <a href="/retry">🔁 Retry Incorrect Questions</a>
             <a href="/restart">🔄 Restart Quiz</a>
         </div>
-    </div>
+    </section>
 
     {% for q in review_data %}
-        <div class="question-block">
+        <section class="question-block">
             <h3>Q{{ q.id }}: {{ q.question }}</h3>
 
-            <p>Your answer:
-                {% if q.user_answer %}
-                    <ul>
-                        {% for ans in q.user_answer %}
-                            <li class="{{ 'correct' if ans in q.correct_answer else 'incorrect' }}">
-                                {{ ans }}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    <span class="unanswered">No answer</span>
-                {% endif %}
-            </p>
+            <p><strong>Your answer:</strong></p>
+            {% if q.user_answer %}
+                <ul>
+                    {% for ans in q.user_answer %}
+                        <li class="{{ 'correct' if ans in q.correct_answer else 'incorrect' }}">
+                            {{ ans }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="unanswered">No answer</p>
+            {% endif %}
 
             {% if not q.is_correct %}
-                <p>Correct answer:
-                    <ul>
-                        {% for correct in q.correct_answer %}
-                            <li><strong>{{ correct }}</strong></li>
-                        {% endfor %}
-                    </ul>
-                </p>
+                <p><strong>Correct answer:</strong></p>
+                <ul>
+                    {% for correct in q.correct_answer %}
+                        <li><strong>{{ correct }}</strong></li>
+                    {% endfor %}
+                </ul>
             {% endif %}
 
             {% if q.explanation %}
                 <p><strong>Explanation:</strong> {{ q.explanation }}</p>
             {% endif %}
-        </div>
+        </section>
     {% endfor %}
 
 </body>

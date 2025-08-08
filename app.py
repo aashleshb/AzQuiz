@@ -5,19 +5,19 @@ import logging
 import os
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'
+app.secret_key = os.getenv('FLASK_SECRET_KEY', 'your_secret_key')  # 🔐 Use env var in production
 app.debug = True
 
 logging.basicConfig(level=logging.DEBUG)
 
 # 🔹 Helper: Get all available question sets from /data
 def get_available_sets():
-    sets = []
     data_dir = "data"
-    if os.path.exists(data_dir):
-        for file in os.listdir(data_dir):
-            if file.endswith(".json") and file.startswith("set"):
-                sets.append(os.path.join(data_dir, file))
+    sets = [
+        os.path.join(data_dir, file)
+        for file in os.listdir(data_dir)
+        if file.endswith(".json") and file.startswith("set")
+    ]
     sets.sort(key=lambda f: int(''.join(filter(str.isdigit, os.path.basename(f))))
               if any(char.isdigit() for char in os.path.basename(f)) else 0)
     return sets
@@ -27,11 +27,13 @@ def get_available_sets():
 def basename_filter(path):
     return os.path.basename(path)
 
+# 🔹 Home page: Show available sets
 @app.route('/')
 def index():
     available_sets = get_available_sets()
     return render_template('index.html', available_sets=available_sets)
 
+# 🔹 Start quiz
 @app.route('/start', methods=['POST'])
 def start_quiz():
     set_name = request.form.get('set_name') or config.DEFAULT_QUESTION_SET
@@ -48,6 +50,7 @@ def start_quiz():
     session['answers'] = []
     return redirect('/quiz')
 
+# 🔹 Quiz flow
 @app.route('/quiz', methods=['GET', 'POST'])
 def quiz():
     questions = app.config.get('QUESTION_CACHE', [])
@@ -73,10 +76,8 @@ def quiz():
             return redirect('/quiz')
 
         question = questions[index]
-        correct_raw = question.get('correct', '')
-        correct_list = [c.strip() for c in correct_raw.split(',')]
+        correct_list = [c.strip() for c in question.get('correct', '').split(',')]
         explanation = question.get('explanation', '')
-
         is_correct = set(selected) == set(correct_list)
 
         feedback = {
@@ -89,9 +90,7 @@ def quiz():
         if is_correct:
             session['score'] += 1
 
-        answers = session.get('answers', [])
-        answers.append(selected)
-        session['answers'] = answers
+        session['answers'].append(selected)
         session['temp_feedback'] = feedback
         return redirect('/quiz')
 
@@ -104,6 +103,7 @@ def quiz():
                            current_index=index,
                            total_questions=len(questions))
 
+# 🔹 Review screen
 @app.route('/review')
 def review():
     questions = app.config.get('QUESTION_CACHE', [])
@@ -137,6 +137,7 @@ def review():
     percentage = (score / total) * 100 if total > 0 else 0
     status = "Pass" if percentage >= 70 else "Fail"
 
+    # 🔁 Store incorrect questions for retry
     session['retry_questions'] = incorrect
     session['retry_index'] = 0
     session['retry_score'] = 0
@@ -149,11 +150,26 @@ def review():
                            percentage=round(percentage, 2),
                            status=status)
 
+# 🔁 Retry incorrect questions
+@app.route('/retry')
+def retry():
+    retry_questions = session.get('retry_questions', [])
+    if not retry_questions:
+        return redirect('/')
+
+    app.config['QUESTION_CACHE'] = retry_questions
+    session['index'] = 0
+    session['score'] = 0
+    session['answers'] = []
+    return redirect('/quiz')
+
+# 🔄 Restart entire quiz
 @app.route('/restart')
 def restart():
     session.clear()
     return redirect('/')
 
+# 🧹 Clear session manually
 @app.route('/clear-session')
 def clear_session():
     try:
@@ -166,6 +182,7 @@ def clear_session():
     except Exception as e:
         return f"<h2>Error clearing session</h2><pre>{e}</pre>", 500
 
+# ⚠️ Global error handler
 @app.errorhandler(Exception)
 def handle_exception(e):
     logging.exception("Unhandled exception:")

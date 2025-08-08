@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "id": 301,
       "question": "You want to ensure that a VM is deployed only in approved regions. What should you configure?",
@@ -359,4 +358,3 @@
       "explanation": "Azure Automation can schedule resource cleanup tasks like VM deletion based on lifecycle rules."
     }
   ]
-}

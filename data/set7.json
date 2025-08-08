@@ -1,5 +1,4 @@
-{
-  "questions": [
+[
     {
       "id": 156,
       "question": "You need to ensure that only traffic from your on-premises network can access an Azure SQL Database. What should you configure?",
@@ -211,4 +210,3 @@
       "explanation": "Custom Azure Policies can enforce deployment conditions based on resource count."
     }
   ]
-}

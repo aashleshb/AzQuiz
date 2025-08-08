@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz Review</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .unanswered { color: gray; font-style: italic; }
+        .question-block {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .summary {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .status-pass {
+            color: green;
+            font-weight: bold;
+        }
+        .status-fail {
+            color: red;
+            font-weight: bold;
+        }
+        .actions a {
+            display: inline-block;
+            margin: 10px;
+            padding: 12px 20px;
+            background-color: #0078D4;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+        .actions a:hover {
+            background-color: #005A9E;
+        }
+        ul {
+            margin: 8px 0;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="summary">
+        <h1>Quiz Complete 🎉</h1>
+        <h2>Score: {{ score }} / {{ total }} ({{ percentage }}%)</h2>
+        <p>Status:
+            {% if status == "Pass" %}
+                <span class="status-pass">✅ {{ status }}</span>
+            {% else %}
+                <span class="status-fail">❌ {{ status }}</span>
+            {% endif %}
+        </p>
+        <div class="actions">
+            <a href="/retry">🔁 Retry Incorrect Questions</a>
+            <a href="/restart">🔄 Restart Quiz</a>
+        </div>
+    </div>
+
+    {% for q in review_data %}
+        <div class="question-block">
+            <h3>Q{{ q.id }}: {{ q.question }}</h3>
+
+            <p>Your answer:
+                {% if q.user_answer %}
+                    <ul>
+                        {% for ans in q.user_answer %}
+                            <li class="{{ 'correct' if ans in q.correct_answer else 'incorrect' }}">
+                                {{ ans }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <span class="unanswered">No answer</span>
+                {% endif %}
+            </p>
+
+            {% if not q.is_correct %}
+                <p>Correct answer:
+                    <ul>
+                        {% for correct in q.correct_answer %}
+                            <li><strong>{{ correct }}</strong></li>
+                        {% endfor %}
+                    </ul>
+                </p>
+            {% endif %}
+
+            {% if q.explanation %}
+                <p><strong>Explanation:</strong> {{ q.explanation }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+</body>
+</html>

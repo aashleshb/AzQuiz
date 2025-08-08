@@ -1,0 +1,279 @@
+[
+  {
+    "id": 32,
+    "question": "You need to ensure that only devices that are hybrid Azure AD joined can access resources. What should you configure?",
+    "options": [
+      "Conditional Access policy with grant control",
+      "Azure AD Connect Health",
+      "Azure AD Privileged Identity Management",
+      "Azure AD Identity Protection"
+    ],
+    "correct": "Conditional Access policy with grant control",
+    "explanation": "Grant controls in Conditional Access can enforce device compliance and hybrid join status."
+  },
+  {
+    "id": 33,
+    "question": "You need to ensure that only compliant devices can access company resources. What should you configure?",
+    "options": [
+      "Azure AD Identity Protection",
+      "Azure AD Connect Health",
+      "Conditional Access policy with device compliance",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with device compliance",
+    "explanation": "Device compliance can be enforced through Conditional Access policies."
+  },
+  {
+    "id": 34,
+    "question": "You need to ensure that only users in the HR department can access a specific application. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with user group filter",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with user group filter",
+    "explanation": "User group filters in Conditional Access allow targeting specific departments."
+  },
+  {
+    "id": 35,
+    "question": "You need to ensure that users accessing resources from outside the corporate network are prompted for MFA. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with location condition",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with location condition",
+    "explanation": "Location-based conditions in Conditional Access can trigger MFA for untrusted locations."
+  },
+  {
+    "id": 36,
+    "question": "You need to ensure that users accessing resources from unmanaged devices are blocked. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with device filter",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with device filter",
+    "explanation": "Device filters in Conditional Access can block access from unmanaged devices."
+  },
+  {
+    "id": 37,
+    "question": "You need to ensure that only users in the Finance department can access a specific SharePoint site. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with user group filter",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with user group filter",
+    "explanation": "User group filters in Conditional Access allow targeting specific departments."
+  },
+  {
+    "id": 38,
+    "question": "You need to ensure that users accessing resources from jailbroken devices are blocked. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with device compliance",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with device compliance",
+    "explanation": "Device compliance policies can detect and block jailbroken devices."
+  },
+  {
+    "id": 39,
+    "question": "You need to ensure that users accessing resources from a specific country are blocked. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with location condition",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with location condition",
+    "explanation": "Location-based conditions in Conditional Access can block access from specific countries."
+  },
+  {
+    "id": 40,
+    "question": "You need to ensure that only users with a specific role can access a sensitive application. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with role filter",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with role filter",
+    "explanation": "Role-based filters in Conditional Access allow targeting users with specific roles."
+  },
+  {
+    "id": 41,
+    "question": "You need to ensure that only users accessing resources from corporate-managed devices can access a sensitive application. What should you configure?",
+    "options": [
+      "Azure AD Connect Health",
+      "Azure AD Identity Protection",
+      "Conditional Access policy with device filter",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with device filter",
+    "explanation": "Device filters in Conditional Access can restrict access to corporate-managed devices."
+  },
+  {
+    "id": 42,
+    "question": "You need to ensure that only users accessing resources from a trusted network can access a sensitive application. What should you configure?",
+    "options": [
+      "Conditional Access policy with location condition",
+      "Azure AD Identity Protection",
+      "Azure AD Connect Health",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with location condition",
+    "explanation": "Location conditions allow access only from trusted networks."
+  },
+  {
+    "id": 43,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. What should you configure?",
+    "options": [
+      "Conditional Access policy with multiple conditions",
+      "Azure AD Identity Protection",
+      "Azure AD Connect Health",
+      "Azure AD Privileged Identity Management"
+    ],
+    "correct": "Conditional Access policy with multiple conditions",
+    "explanation": "Multiple conditions can enforce both device compliance and location trust."
+  },
+  {
+    "id": 44,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Grant controls enforce multiple access requirements."
+  },
+  {
+    "id": 45,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with session control. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Session control does not enforce device or location requirements."
+  },
+  {
+    "id": 46,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with user group filter. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "User group filters do not enforce device or location compliance."
+  },
+  {
+    "id": 47,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with role filter. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Role filters do not enforce device or location compliance."
+  },
+  {
+    "id": 48,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with device filter. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Device filters alone do not enforce location compliance."
+  },
+  {
+    "id": 49,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with location condition. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Location condition alone does not enforce device compliance."
+  },
+  {
+    "id": 50,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with device compliance. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Device compliance alone does not enforce location trust."
+  },
+  {
+    "id": 51,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring both conditions. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Grant control can enforce multiple access conditions simultaneously."
+  },
+  {
+    "id": 52,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring either condition. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Requiring either condition does not guarantee both compliance and location trust."
+  },
+  {
+    "id": 53,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring both conditions. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Grant control requiring both conditions enforces both device compliance and location trust."
+  },
+  {
+    "id": 54,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring either condition. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Requiring either condition does not guarantee both compliance and location trust."
+  },
+  {
+    "id": 55,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring MFA. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "MFA alone does not enforce device or location compliance."
+  },
+  {
+    "id": 56,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring a password change. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Password change does not enforce device or location compliance."
+  },
+  {
+    "id": 57,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring terms of use acceptance. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Terms of use acceptance does not enforce device or location compliance."
+  },
+  {
+    "id": 58,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring app enforced restrictions. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "App enforced restrictions do not enforce device or location compliance."
+  },
+  {
+    "id": 59,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring compliant device and MFA. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "This configuration enforces device compliance and MFA, but not location trust."
+  },
+  {
+    "id": 60,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring trusted location and MFA. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "This configuration enforces location trust and MFA, but not device compliance."
+  },
+  {
+    "id": 61,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring compliant device and trusted location. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "This configuration enforces both required conditions."
+  },
+  {
+    "id": 62,
+    "question": "You need to ensure that only users accessing resources from a compliant device and a trusted location can access a sensitive application. Solution: You configure a Conditional Access policy with grant control requiring compliant device, trusted location, and MFA. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "This configuration enforces all three conditions for secure access."
+  }
+]

@@ -1,0 +1,234 @@
+[
+  {
+    "id": 1,
+    "question": "Your company has several departments. Each department has a number of virtual machines (VMs). You want to associate each VM with its respective department. What should you do?",
+    "options": [
+      "Assign resource locks",
+      "Create separate resource groups",
+      "Assign tags to the virtual machines",
+      "Use Azure Policy"
+    ],
+    "correct": "Assign tags to the virtual machines",
+    "explanation": "Tags allow you to categorize resources by department, environment, or other criteria."
+  },
+  {
+    "id": 2,
+    "question": "You want to require Global Administrators to use MFA and an Azure AD-joined device when connecting from untrusted locations. Solution: You alter user settings on the MFA page. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "MFA settings alone don’t enforce device compliance or location-based access."
+  },
+  {
+    "id": 3,
+    "question": "You want to require Global Administrators to use MFA and an Azure AD-joined device when connecting from untrusted locations. Solution: You alter session control in Conditional Access. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Session control doesn’t enforce device compliance or MFA."
+  },
+  {
+    "id": 4,
+    "question": "You want to require Global Administrators to use MFA and an Azure AD-joined device when connecting from untrusted locations. Solution: You alter grant control in Conditional Access. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "By altering grant controls in a Conditional Access policy, you can enforce MFA, Device compliance or Azure AD join status, Location-based access restrictions."
+  },
+  {
+    "id": 5,
+    "question": "You need to deploy an Ubuntu Server VM with a custom trusted root CA. What should you use?",
+    "options": [
+      "Azure Portal",
+      "ARM Template",
+      "az vm create command",
+      "Azure Marketplace"
+    ],
+    "correct": "az vm create command",
+    "explanation": "The CLI allows custom configuration during VM creation."
+  },
+  {
+    "id": 6,
+    "question": "You need to enable MFA for newly added users from an acquired company. Solution: You reconfigure the existing usage model via the Azure portal. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Reconfiguring the usage model via the portal does not enable MFA for new users."
+  },
+  {
+    "id": 7,
+    "question": "You need to enable MFA for newly added users from an acquired company. Solution: You reconfigure the existing usage model via the Azure CLI. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Azure CLI reconfiguration alone does not enable MFA for new users."
+  },
+  {
+    "id": 8,
+    "question": "You need to enable MFA for newly added users from an acquired company. Solution: You create a new MFA provider with a backup from the existing provider. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "New MFA providers cannot be created after September 1, 2018."
+  },
+  {
+    "id": 9,
+    "question": "You need to replicate a new user from on-prem AD to Azure AD immediately. Solution: You run Start-ADSyncSyncCycle -PolicyType Initial. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "This cmdlet does not guarantee immediate replication."
+  },
+  {
+    "id": 10,
+    "question": "You need to replicate a new user from on-prem AD to Azure AD immediately. Solution: You force replication of the Global Catalog. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Forcing Global Catalog replication does not sync with Azure AD."
+  },
+  {
+    "id": 11,
+    "question": "You need to replicate a new user from on-prem AD to Azure AD immediately. Solution: You run Start-ADSyncSyncCycle -PolicyType Delta. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "The Delta sync triggers immediate replication of recent changes."
+  },
+  {
+    "id": 12,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. What should you do?",
+    "options": [
+      "Modify the network security group (NSG)",
+      "Change the VM size",
+      "Add a public IP address",
+      "Configure a load balancer"
+    ],
+    "correct": "Add a public IP address",
+    "explanation": "A public IP is required for direct internet access."
+  },
+  {
+    "id": 13,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You modify the NSG to allow inbound traffic. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "NSG rules alone don’t expose the VM without a public IP."
+  },
+  {
+    "id": 14,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You assign a public IP address to VM1. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Assigning a public IP enables internet access."
+  },
+  {
+    "id": 15,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a load balancer. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "A load balancer alone doesn’t expose a VM unless it’s configured with a public frontend."
+  },
+  {
+    "id": 16,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You change the VM size. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Changing VM size does not affect network accessibility."
+  },
+  {
+    "id": 17,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a NAT gateway. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "A NAT gateway enables outbound connectivity, not inbound access."
+  },
+  {
+    "id": 18,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public load balancer with a frontend IP. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "A public load balancer with a frontend IP can expose the VM to the internet."
+  },
+  {
+    "id": 19,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a private endpoint. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Private endpoints are used for internal access, not public internet exposure."
+  },
+  {
+    "id": 20,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public endpoint. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Public endpoints allow internet access to the VM."
+  },
+  {
+    "id": 21,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and modify the NSG to allow inbound traffic. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Both a public IP and NSG rule are required for internet access."
+  },
+  {
+    "id": 22,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a load balancer with a frontend IP. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "This setup allows external access through the load balancer."
+  },
+  {
+    "id": 23,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a NAT gateway. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "NAT gateway provides outbound access, not inbound connectivity."
+  },
+  {
+    "id": 24,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a private endpoint. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Private endpoints are for internal access only."
+  },
+  {
+    "id": 25,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a public endpoint. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Public endpoints allow external access to the VM."
+  },
+  {
+    "id": 26,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a public load balancer. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "A public load balancer with a frontend IP enables internet access."
+  },
+  {
+    "id": 27,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a public DNS name. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "A public DNS name maps to the public IP for internet access."
+  },
+  {
+    "id": 28,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a firewall rule. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Firewall rules can allow inbound traffic to the VM."
+  },
+  {
+    "id": 29,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and an application gateway. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Application gateways can route external traffic to VMs."
+  },
+  {
+    "id": 30,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a reverse proxy. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Reverse proxies can expose internal services to the internet."
+  },
+  {
+    "id": 31,
+    "question": "You need to ensure that a virtual machine named VM1 is accessible from the Internet. Solution: You configure a public IP address and a VPN gateway. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "VPN gateways are for secure remote access, not public exposure."
+  }
+]

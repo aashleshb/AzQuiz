@@ -1,0 +1,144 @@
+{
+  "questions": [
+    {
+      "id": 136,
+      "question": "You need to ensure that a virtual machine scale set can automatically increase the number of instances when CPU usage exceeds 80%. What should you configure?",
+      "options": ["Availability Set", "Autoscale settings", "Azure Policy", "Update domains"],
+      "correct": "Autoscale settings",
+      "explanation": "Autoscale settings allow scale sets to automatically adjust the number of VM instances based on performance metrics."
+    },
+    {
+      "id": 137,
+      "question": "You want to deploy a VM using an ARM template and ensure the password is not stored in plain text. What should you use?",
+      "options": ["Azure Key Vault", "Azure Policy", "Azure CLI", "Azure Monitor"],
+      "correct": "Azure Key Vault",
+      "explanation": "Azure Key Vault securely stores secrets like passwords and can be referenced in ARM templates."
+    },
+    {
+      "id": 138,
+      "question": "You need to block all outbound traffic from a VM except traffic to Azure Key Vault. What should you configure?",
+      "options": ["NSG with service tag", "Private Endpoint", "Route Table", "Application Gateway"],
+      "correct": "NSG with service tag",
+      "explanation": "Service tags in NSGs allow you to permit traffic to Azure services like Key Vault while blocking other outbound traffic."
+    },
+    {
+      "id": 139,
+      "question": "You want to allow RDP access to a VM only from a specific IP address. What should you configure?",
+      "options": ["NSG inbound rule", "Azure Firewall", "Route Table", "Application Gateway"],
+      "correct": "NSG inbound rule",
+      "explanation": "NSG inbound rules can restrict access to specific ports and IP ranges."
+    },
+    {
+      "id": 140,
+      "question": "You need to ensure that deleted files in an Azure File Share can be recovered. What should you enable?",
+      "options": ["Soft Delete", "Immutable Blob Storage", "Geo-redundant Storage", "Azure Backup"],
+      "correct": "Soft Delete",
+      "explanation": "Soft Delete allows recovery of deleted files within a retention period."
+    },
+    {
+      "id": 141,
+      "question": "You want to restrict access to a blob container to users with Azure AD credentials. What should you use?",
+      "options": ["Azure AD RBAC", "Shared Access Signature", "Access Keys", "Private Endpoint"],
+      "correct": "Azure AD RBAC",
+      "explanation": "Azure AD RBAC provides identity-based access control to blob containers."
+    },
+    {
+      "id": 142,
+      "question": "You want to receive an alert when a VM’s disk space usage exceeds 90%. What should you configure?",
+      "options": ["Azure Monitor with a metric alert", "Azure Policy", "Azure Advisor", "Azure Security Center"],
+      "correct": "Azure Monitor with a metric alert",
+      "explanation": "Azure Monitor can track disk metrics and trigger alerts based on thresholds."
+    },
+    {
+      "id": 143,
+      "question": "You need to track failed login attempts to an Azure VM. What should you use?",
+      "options": ["Azure Monitor logs", "Azure Advisor", "Azure Policy", "Azure Cost Management"],
+      "correct": "Azure Monitor logs",
+      "explanation": "Azure Monitor logs can capture security events like failed login attempts."
+    },
+    {
+      "id": 144,
+      "question": "You need to ensure that traffic from a VM to an Azure Key Vault is allowed, even though outbound internet access is blocked by an NSG. What should you use?",
+      "options": ["Service Endpoint", "Private Endpoint", "Application Gateway", "Azure Firewall"],
+      "correct": "Service Endpoint",
+      "explanation": "Service Endpoints allow secure access to Azure services over the Microsoft backbone network, bypassing NSG restrictions."
+    },
+    {
+      "id": 145,
+      "question": "You want to allow users to request temporary access to privileged roles in Azure AD. What should you configure?",
+      "options": ["Azure AD Identity Protection", "Azure AD Conditional Access", "Azure AD Privileged Identity Management (PIM)", "Azure AD Connect"],
+      "correct": "Azure AD Privileged Identity Management (PIM)",
+      "explanation": "PIM enables just-in-time access to privileged roles with approval workflows and auditing."
+    },
+    {
+      "id": 146,
+      "question": "You need to enforce encryption of all data stored in Azure SQL Database. What should you enable?",
+      "options": ["Transparent Data Encryption (TDE)", "Always Encrypted", "Azure Defender", "SQL Auditing"],
+      "correct": "Transparent Data Encryption (TDE)",
+      "explanation": "TDE automatically encrypts data at rest in Azure SQL Database."
+    },
+    {
+      "id": 147,
+      "question": "You want to ensure that only approved VM sizes are used in your subscription. What should you implement?",
+      "options": ["Azure Policy", "Azure Blueprints", "Management Groups", "RBAC"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can restrict resource configurations, including allowed VM sizes."
+    },
+    {
+      "id": 148,
+      "question": "You need to apply consistent resource configurations across multiple subscriptions. What should you use?",
+      "options": ["Azure Blueprints", "Azure Policy", "ARM Templates", "Azure Resource Groups"],
+      "correct": "Azure Blueprints",
+      "explanation": "Blueprints allow you to package policies, role assignments, and templates for consistent deployment."
+    },
+    {
+      "id": 149,
+      "question": "You want to monitor the performance and availability of an Azure web app. Which service should you use?",
+      "options": ["Azure Monitor", "Azure Advisor", "Azure Policy", "Azure Security Center"],
+      "correct": "Azure Monitor",
+      "explanation": "Azure Monitor provides metrics, logs, and alerts to track performance and availability of resources."
+    },
+    {
+      "id": 150,
+      "question": "You need to identify underutilized resources to reduce costs. What should you use?",
+      "options": ["Azure Advisor", "Azure Monitor", "Azure Cost Management", "Azure Policy"],
+      "correct": "Azure Advisor",
+      "explanation": "Azure Advisor provides recommendations for cost optimization and performance improvements."
+    },
+    {
+      "id": 151,
+      "question": "You want to automate the deployment of multiple Azure resources using a declarative syntax. What should you use?",
+      "options": ["Azure CLI", "ARM templates", "Azure PowerShell", "Azure Portal"],
+      "correct": "ARM templates",
+      "explanation": "ARM templates use JSON to define infrastructure as code for consistent deployments."
+    },
+    {
+      "id": 152,
+      "question": "You want to ensure that a VM is configured with specific software after deployment. What should you use?",
+      "options": ["Custom Script Extension", "Azure Monitor", "Azure Policy", "Azure Advisor"],
+      "correct": "Custom Script Extension",
+      "explanation": "Custom Script Extension allows you to run scripts on a VM during or after deployment."
+    },
+    {
+      "id": 153,
+      "question": "You need to restrict inbound traffic to a subnet in your virtual network. What should you configure?",
+      "options": ["Azure Firewall", "Network Security Group (NSG)", "Route Table", "Application Gateway"],
+      "correct": "Network Security Group (NSG)",
+      "explanation": "NSGs allow you to define inbound and outbound security rules for subnets or individual network interfaces."
+    },
+    {
+      "id": 154,
+      "question": "You want to detect risky sign-ins and automatically respond to them. Which Azure service should you use?",
+      "options": ["Azure AD Identity Protection", "Azure Monitor", "Azure Sentinel", "Azure AD Connect"],
+      "correct": "Azure AD Identity Protection",
+      "explanation": "Azure AD Identity Protection detects suspicious sign-ins and can enforce conditional access policies automatically."
+    },
+    {
+      "id": 155,
+      "question": "You want to track and optimize cloud spending across multiple subscriptions. What should you use?",
+      "options": ["Azure Advisor", "Azure Cost Management + Billing", "Azure Monitor", "Azure Policy"],
+      "correct": "Azure Cost Management + Billing",
+      "explanation": "Azure Cost Management helps monitor, allocate, and optimize cloud costs across subscriptions and resource groups."
+    }
+  ]
+}

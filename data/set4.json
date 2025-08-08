@@ -1,0 +1,256 @@
+[
+  {
+    "id": 93,
+    "question": "You have an Azure subscription named Subscription1 that contains a virtual network named VNet1. VNet1 is in a resource group named RG1. Subscription1 has a user named User1. User1 has the following roles: Reader, Security Admin, Security Reader. You need to ensure that User1 can assign the Reader role for VNet1 to other users. What should you do?",
+    "options": [
+      "Assign User1 the Owner role for VNet1",
+      "Assign User1 the Contributor role for VNet1",
+      "Assign User1 the User Access Administrator role for VNet1",
+      "Assign User1 the Network Contributor role for VNet1"
+    ],
+    "correct": "Assign User1 the Owner role for VNet1",
+    "explanation": "Only the Owner role allows assigning roles to other users."
+  },
+  {
+    "id": 94,
+    "question": "You configure a custom RBAC role named Role1. You need to ensure that Role1 can be assigned only to a resource group named RG1 and allows users to sign in to VMs. What should you modify?",
+    "options": [
+      "AssignableScopes and RoleType",
+      "Permissions and RoleName",
+      "Actions and NotActions",
+      "Actions and AssignableScopes"
+    ],
+    "correct": "Actions and AssignableScopes",
+    "explanation": "AssignableScopes limits where the role can be assigned (e.g., RG1). Actions defines what the role allows, such as signing in to virtual machines."
+  },
+  {
+    "id": 95,
+    "question": "You have an Azure subscription that contains a storage account named storage1. The storage account contains a file share named share1. You need to grant Group1 the Storage File Data SMB Share Elevated Contributor role for share1. What should you do first?",
+    "options": [
+      "Enable Azure AD DS authentication for storage1",
+      "Assign the role at the subscription level",
+      "Create a custom role",
+      "Enable soft delete for share1"
+    ],
+    "correct": "Enable Azure AD DS authentication for storage1",
+    "explanation": "Azure AD DS authentication is required for assigning roles to file shares."
+  },
+  {
+    "id": 96,
+    "question": "You have 15 Azure subscriptions. You need to ensure that Group1 can manage role assignments for all subscriptions. What should you do?",
+    "options": [
+      "Assign Group1 the Owner role for each subscription",
+      "Assign Group1 the Contributor role for each subscription",
+      "Assign Group1 the User Access Administrator role for the root management group",
+      "Assign Group1 the Reader role for each subscription"
+    ],
+    "correct": "Assign Group1 the User Access Administrator role for the root management group",
+    "explanation": "This role allows managing access across all subscriptions under the root management group."
+  },
+  {
+    "id": 97,
+    "question": "You create an Azure Policy definition named Policy1. To which Azure resources can you assign Policy1 and specify exclusions?",
+    "options": [
+      "Management groups, subscriptions, resource groups, and resources",
+      "Subscriptions only",
+      "Resource groups only",
+      "Resources only"
+    ],
+    "correct": "Management groups, subscriptions, resource groups, and resources",
+    "explanation": "Azure Policy can be assigned at multiple scopes and exclusions can be specified at each level."
+  },
+  {
+    "id": 98,
+    "question": "You have an Azure subscription that contains the following users: User1, User2, User3, User4. User1 creates a new Azure AD tenant named external.contoso.onmicrosoft.com. You need to create new user accounts in external.contoso.onmicrosoft.com. Solution: You instruct User2 to create the user accounts. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Only users with appropriate permissions in the external tenant can create accounts there."
+  },
+  {
+    "id": 99,
+    "question": "You have an Azure subscription that contains the following users: User1, User2, User3, User4. User1 creates a new Azure AD tenant named external.contoso.onmicrosoft.com. You need to create new user accounts in external.contoso.onmicrosoft.com. Solution: You instruct User4 to create the user accounts. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "User4 must have permissions in the external tenant to create accounts."
+  },
+  {
+    "id": 100,
+    "question": "You have an Azure subscription that contains the following users: User1, User2, User3, User4. User1 creates a new Azure AD tenant named external.contoso.onmicrosoft.com. You need to create new user accounts in external.contoso.onmicrosoft.com. Solution: You instruct User3 to create the user accounts. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "User3 must have permissions in the external tenant to create accounts."
+  },
+  {
+    "id": 101,
+    "question": "You have two Azure subscriptions named Sub1 and Sub2. An administrator creates a custom role that has an assignable scope to a resource group named RG1 in Sub1. You need to ensure that you can apply the custom role to any resource group in Sub1 and Sub2. What should you do?",
+    "options": [
+      "Add Sub1 and Sub2 to the assignable scopes and remove RG1",
+      "Create a new role with broader permissions",
+      "Assign the role at the subscription level",
+      "Duplicate the role in Sub2"
+    ],
+    "correct": "Add Sub1 and Sub2 to the assignable scopes and remove RG1",
+    "explanation": "Expanding the assignable scopes allows the role to be used across both subscriptions."
+  },
+  {
+    "id": 102,
+    "question": "You have an Azure Subscription that contains a storage account named storageacct1234 and two users named User1 and User2. You assign User1 the roles shown in the exhibit. Which two actions can User1 perform?",
+    "options": [
+      "Upload blob data to storageacct1234",
+      "Delete blob containers in storageacct1234",
+      "View blob data in storageacct1234",
+      "Modify access policies for storageacct1234"
+    ],
+    "correct": "Upload blob data to storageacct1234, View blob data in storageacct1234",
+    "explanation": "User1 has permissions to read and write blob data but not to manage access policies."
+  },
+  {
+    "id": 103,
+    "question": "You have an Azure subscription named Subscription1 that contains an Azure Log Analytics workspace named Workspace1. You need to view the error events from a table named Event. Which query should you run in Workspace1?",
+    "options": [
+      "Event | search \"error\"",
+      "search in (Event) \"error\"",
+      "Event | where EventType == \"error\"",
+      "Event | summarize count() by EventType"
+    ],
+    "correct": "Event | search \"error\"",
+    "explanation": "This query searches for the term 'error' in the Event table."
+  },
+  {
+    "id": 104,
+    "question": "You have an Azure App Services web app named App1. You plan to deploy App1 by using Web Deploy. You need to ensure that the developers of App1 can use their Azure AD credentials to deploy content to App1. The solution must use the principle of least privilege. What should you do?",
+    "options": [
+      "Assign the Contributor role to the developers",
+      "Assign the Website Contributor role to the developers",
+      "Assign the Owner role to the developers",
+      "Assign the DevTest Labs User role to the developers"
+    ],
+    "correct": "Assign the Website Contributor role to the developers",
+    "explanation": "Website Contributor allows deployment without broader permissions."
+  },
+  {
+    "id": 105,
+    "question": "You have an Azure Active Directory (Azure AD) tenant named contoso.com. You have a CSV file that contains the names and email addresses of 500 external users. You need to create a guest user account in contoso.com for each of the 500 external users. Solution: From Azure AD in the Azure portal, you use the Bulk invite users operation. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Bulk invite users is the correct method for importing external users via CSV, so the goal is met."
+  },
+  {
+    "id": 106,
+    "question": "You have an Azure subscription that is linked to an Azure AD tenant. The tenant contains the custom role-based access control (RBAC) roles shown in the following table. From the Azure portal, you need to create two custom roles named Role3 and Role4. Role3 will be an Azure subscription role. Role4 will be an Azure AD role. Which roles can you clone to create the new roles?",
+    "options": [
+      "Role1 and Role2",
+      "Role1 only",
+      "Role2 only",
+      "Neither Role1 nor Role2"
+    ],
+    "correct": "Role2 only",
+    "explanation": "Azure AD roles must be cloned from existing Azure AD roles."
+  },
+  {
+    "id": 107,
+    "question": "You have an Azure subscription named Sub1 that contains two users named User1 and User2. You need to assign RBAC roles to User1 and User2. The users must be able to perform the following tasks in Sub1: User1 must view the data in any storage account. User2 must assign users the Contributor role for storage accounts. The solution must use the principle of least privilege. Which RBAC role should you assign to each user?",
+    "options": [
+      "User1: Reader; User2: Owner",
+      "User1: Reader + Data Access; User2: Owner",
+      "User1: Contributor; User2: Contributor",
+      "User1: Storage Account Contributor; User2: Storage Account Contributor"
+    ],
+    "correct": "User1: Reader + Data Access; User2: Owner",
+    "explanation": "Reader + Data Access allows viewing storage data; Owner allows role assignments."
+  },
+  {
+    "id": 108,
+    "question": "You have an Azure subscription that contains 10 virtual machines, a key vault named Vault1, and a network security group (NSG) named NSG1. All the resources are deployed to the East US Azure region. The virtual machines are protected by using NSG1. NSG1 is configured to block all outbound traffic to the internet. You need to ensure that the virtual machines can access Vault1. The solution must use the principle of least privilege and minimize administrative effort. What should you configure as the destination of the outbound security rule for NSG1?",
+    "options": [
+      "Service Tag",
+      "IP Address",
+      "Application Security Group",
+      "FQDN"
+    ],
+    "correct": "Service Tag",
+    "explanation": "Using the 'AzureKeyVault' service tag allows secure access with minimal configuration."
+  },
+  {
+    "id": 109,
+    "question": "You have an Azure AD tenant named adatum.com that contains the groups shown in the following table. Adatum.com contains the users shown in the following table. You assign the Azure Active Directory Premium Plan 2 license to Group1 and User4. Which users are assigned the Azure Active Directory Premium Plan 2 license?",
+    "options": [
+      "User1 and User4 only",
+      "User2 and User4 only",
+      "User3 and User4 only",
+      "All users"
+    ],
+    "correct": "User1 and User4 only",
+    "explanation": "Only direct license assignments and group-based assignments apply."
+  },
+  {
+    "id": 110,
+    "question": "You have an Azure AD tenant named contoso.com. You have two external partner organizations named fabrikam.com and litwareinc.com. Fabrikam.com is configured as a connected organization. You create an access package and configure external user lifecycle settings. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "options": [
+      "Users from fabrikam.com can request access",
+      "Users from litwareinc.com can request access",
+      "Users from fabrikam.com are automatically removed after expiration"
+    ],
+    "correct": "Yes, No, Yes",
+    "explanation": "Connected organizations can request access and lifecycle settings apply to them."
+  },
+  {
+    "id": 111,
+    "question": "You have an Azure subscription named Subscription1 that contains a virtual network named VNet1. VNet1 is in a resource group named RG1. Subscription1 has a user named User1. User1 has the following roles: Reader, Security Admin, Security Reader. You need to ensure that User1 can assign the Reader role for VNet1 to other users. What should you do?",
+    "options": [
+      "Assign User1 the Owner role for VNet1",
+      "Assign User1 the Contributor role for VNet1",
+      "Assign User1 the User Access Administrator role for VNet1",
+      "Assign User1 the Network Contributor role for VNet1"
+    ],
+    "correct": "Assign User1 the User Access Administrator role for VNet1",
+    "explanation": "User Access Administrator allows managing role assignments."
+  },
+  {
+    "id": 112,
+    "question": "You have an Azure subscription that contains the users shown in the following table. The groups are configured as shown in the following table. You have a resource group named RG1. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "options": [
+      "User1 can manage RG1",
+      "User2 can manage RG1",
+      "User3 can manage RG1"
+    ],
+    "correct": "No, No, Yes",
+    "explanation": "Only User3 has the necessary role assignment through group membership."
+  },
+  {
+    "id": 113,
+    "question": "You need to ensure that users can only access Azure resources from devices that are marked as compliant in Azure AD. What should you configure?",
+    "options": [
+      "Azure AD Conditional Access policy",
+      "Azure AD Privileged Identity Management (PIM)",
+      "Azure AD Identity Protection",
+      "Azure Policy"
+    ],
+    "correct": "Azure AD Conditional Access policy",
+    "explanation": "Conditional Access policies allow you to enforce access requirements such as device compliance, location, and MFA."
+  },
+  {
+    "id": 114,
+    "question": "Your company wants to allow developers to deploy resources but restrict them from modifying access permissions. Which built-in role should you assign?",
+    "options": [
+      "Owner",
+      "Contributor",
+      "User Access Administrator",
+      "Reader"
+    ],
+    "correct": "Contributor",
+    "explanation": "The Contributor role allows resource creation and management but does not permit changing access permissions."
+  },
+  {
+    "id": 115,
+    "question": "You need to ensure that traffic from a virtual machine to an Azure Key Vault is allowed, even though outbound internet access is blocked by a Network Security Group. What should you use?",
+    "options": [
+      "Service Endpoint",
+      "Private Endpoint",
+      "Application Gateway",
+      "Azure Firewall"
+    ],
+    "correct": "Service Endpoint",
+    "explanation": "Service Endpoints allow secure access to Azure services over the Microsoft backbone network, bypassing NSG restrictions."
+  }
+]

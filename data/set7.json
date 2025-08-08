@@ -1,0 +1,214 @@
+{
+  "questions": [
+    {
+      "id": 156,
+      "question": "You need to ensure that only traffic from your on-premises network can access an Azure SQL Database. What should you configure?",
+      "options": ["Firewall rules", "Private Endpoint", "Service Endpoint", "NSG"],
+      "correct": "Private Endpoint",
+      "explanation": "Private Endpoints allow secure access to Azure services over a private IP within your virtual network."
+    },
+    {
+      "id": 157,
+      "question": "You want to enforce MFA for users accessing the Azure portal. What should you configure?",
+      "options": ["Conditional Access policy", "Azure AD Connect", "Azure AD B2C", "Azure AD Domain Services"],
+      "correct": "Conditional Access policy",
+      "explanation": "Conditional Access policies allow you to enforce MFA based on user, location, and application."
+    },
+    {
+      "id": 158,
+      "question": "You need to ensure that a VM is automatically shut down every night to save costs. What should you use?",
+      "options": ["Automation Account", "Azure Monitor", "Azure Policy", "Azure Advisor"],
+      "correct": "Automation Account",
+      "explanation": "Azure Automation can schedule tasks like VM shutdowns using runbooks."
+    },
+    {
+      "id": 159,
+      "question": "You want to deploy a web app to multiple regions for high availability. What should you configure?",
+      "options": ["Traffic Manager", "Application Gateway", "Azure CDN", "NSG"],
+      "correct": "Traffic Manager",
+      "explanation": "Traffic Manager distributes traffic across multiple regions using DNS-based routing."
+    },
+    {
+      "id": 160,
+      "question": "You need to ensure that only HTTPS traffic is allowed to your web app. What should you configure?",
+      "options": ["App Service TLS settings", "NSG", "Azure Firewall", "Azure Policy"],
+      "correct": "App Service TLS settings",
+      "explanation": "App Service allows you to enforce HTTPS-only access through TLS settings."
+    },
+    {
+      "id": 161,
+      "question": "You want to store secrets and access them securely from an Azure Function. What should you use?",
+      "options": ["Azure Key Vault", "App Settings", "Environment Variables", "Azure Blob Storage"],
+      "correct": "Azure Key Vault",
+      "explanation": "Key Vault securely stores secrets and can be integrated with Azure Functions."
+    },
+    {
+      "id": 162,
+      "question": "You need to ensure that a VM is deployed in a zone that provides high availability. What should you use?",
+      "options": ["Availability Zone", "Availability Set", "Update Domain", "Fault Domain"],
+      "correct": "Availability Zone",
+      "explanation": "Availability Zones are physically separate locations within a region for high availability."
+    },
+    {
+      "id": 163,
+      "question": "You want to ensure that a storage account is replicated to another region for disaster recovery. What should you enable?",
+      "options": ["Geo-redundant Storage (GRS)", "Locally-redundant Storage (LRS)", "Zone-redundant Storage (ZRS)", "Read-access GRS"],
+      "correct": "Geo-redundant Storage (GRS)",
+      "explanation": "GRS replicates data to a secondary region for disaster recovery."
+    },
+    {
+      "id": 164,
+      "question": "You need to ensure that a VM can access a storage account securely without using access keys. What should you configure?",
+      "options": ["Managed Identity", "Shared Access Signature", "Private Endpoint", "Service Endpoint"],
+      "correct": "Managed Identity",
+      "explanation": "Managed Identity allows secure access to Azure resources without credentials."
+    },
+    {
+      "id": 165,
+      "question": "You want to monitor the number of requests to an Azure Function. What should you use?",
+      "options": ["Application Insights", "Azure Monitor", "Azure Advisor", "Azure Policy"],
+      "correct": "Application Insights",
+      "explanation": "Application Insights provides detailed telemetry for Azure Functions, including request counts."
+    },
+    {
+      "id": 166,
+      "question": "You need to ensure that a VM is protected against malware. What should you enable?",
+      "options": ["Microsoft Defender for Endpoint", "Azure Policy", "NSG", "Azure Firewall"],
+      "correct": "Microsoft Defender for Endpoint",
+      "explanation": "Defender for Endpoint provides advanced threat protection for VMs."
+    },
+    {
+      "id": 167,
+      "question": "You want to ensure that only approved users can create resources in a subscription. What should you use?",
+      "options": ["RBAC", "Azure Policy", "Management Groups", "Azure Blueprints"],
+      "correct": "RBAC",
+      "explanation": "Role-Based Access Control (RBAC) restricts actions based on user roles."
+    },
+    {
+      "id": 168,
+      "question": "You need to ensure that a VM is restarted if it crashes. What should you configure?",
+      "options": ["Availability Set", "Recovery Services Vault", "Azure Monitor alert", "Auto-heal settings"],
+      "correct": "Azure Monitor alert",
+      "explanation": "Azure Monitor alerts can detect VM crash conditions and trigger automated actions such as restarting the VM."
+    },
+    {
+      "id": 169,
+      "question": "You want to deploy a containerized application to Azure. What should you use?",
+      "options": ["Azure Container Instances", "Azure Functions", "App Service", "Azure Batch"],
+      "correct": "Azure Container Instances",
+      "explanation": "ACI allows quick deployment of containers without managing infrastructure."
+    },
+    {
+      "id": 170,
+      "question": "You need to ensure that a VM can access the internet but not be accessed from the internet. What should you configure?",
+      "options": ["Outbound NSG rule", "Inbound NSG rule", "Private IP only", "Azure Firewall"],
+      "correct": "Inbound NSG rule",
+      "explanation": "Blocking inbound NSG rules prevents external access while allowing outbound traffic."
+    },
+    {
+      "id": 171,
+      "question": "You want to ensure that a web app is protected against common threats like SQL injection. What should you use?",
+      "options": ["Web Application Firewall (WAF)", "Azure Firewall", "NSG", "Azure Policy"],
+      "correct": "Web Application Firewall (WAF)",
+      "explanation": "WAF protects web apps from common vulnerabilities and attacks."
+    },
+    {
+      "id": 172,
+      "question": "You need to ensure that a VM is backed up daily. What should you configure?",
+      "options": ["Recovery Services Vault", "Azure Monitor", "Azure Policy", "Azure Advisor"],
+      "correct": "Recovery Services Vault",
+      "explanation": "Recovery Services Vault manages backups for VMs and other resources."
+    },
+    {
+      "id": 173,
+      "question": "You want to restrict access to a storage account based on IP address. What should you configure?",
+      "options": ["Firewall rules", "NSG", "Private Endpoint", "Service Endpoint"],
+      "correct": "Firewall rules",
+      "explanation": "Storage account firewall rules allow access only from specified IP ranges."
+    },
+    {
+      "id": 174,
+      "question": "You need to ensure that a VM is deployed with a specific OS version. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to specify exact configurations, including OS versions."
+    },
+    {
+      "id": 175,
+      "question": "You want to ensure that a VM is not exposed to the internet. What should you avoid?",
+      "options": ["Public IP address", "Private IP address", "NSG", "Azure Firewall"],
+      "correct": "Public IP address",
+      "explanation": "Assigning a public IP exposes the VM to the internet."
+    },
+    {
+      "id": 176,
+      "question": "You need to ensure that a VM can access a database in another region securely. What should you configure?",
+      "options": ["VNet peering", "NSG", "Azure Firewall", "Route Table"],
+      "correct": "VNet peering",
+      "explanation": "VNet peering allows secure communication between VNets across regions."
+    },
+    {
+      "id": 177,
+      "question": "You want to ensure that a VM is deployed in a region with data residency compliance. What should you check?",
+      "options": ["Azure Compliance Documentation", "Azure Advisor", "Azure Monitor", "Azure Policy"],
+      "correct": "Azure Compliance Documentation",
+      "explanation": "Azure provides region-specific compliance details to meet data residency requirements."
+    },
+    {
+      "id": 178,
+      "question": "You need to ensure that a VM is restarted automatically if it becomes unresponsive. What should you configure?",
+      "options": ["Azure Monitor alert with action group", "Azure Policy", "Azure Advisor", "NSG"],
+      "correct": "Azure Monitor alert with action group",
+      "explanation": "Monitor alerts can trigger actions like restarting a VM when health checks fail."
+    },
+    {
+      "id": 179,
+      "question": "You want to ensure that only users from a specific country can access an Azure web app. What should you configure?",
+      "options": ["Conditional Access with location filter", "NSG", "Azure Firewall", "Azure Policy"],
+      "correct": "Conditional Access with location filter",
+      "explanation": "Conditional Access policies can restrict access based on geographic location using IP ranges."
+    },
+    {
+      "id": 180,
+      "question": "You need to ensure that a VM is deployed with a specific tag for cost tracking. What should you use?",
+      "options": ["Azure Policy", "Azure Monitor", "Azure Advisor", "ARM template"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce tagging rules during resource creation for governance and cost tracking."
+    },
+    {
+      "id": 181,
+      "question": "You want to ensure that a VM is isolated from other workloads in the same VNet. What should you configure?",
+      "options": ["Subnet-level NSG", "Route Table", "Application Gateway", "Azure Firewall"],
+      "correct": "Subnet-level NSG",
+      "explanation": "Subnet-level NSGs allow you to isolate traffic between workloads within the same VNet."
+    },
+    {
+      "id": 182,
+      "question": "You need to ensure that a VM can only be accessed using a certificate. What should you configure?",
+      "options": ["Just-in-Time VM access with certificate-based authentication", "NSG", "Azure AD Join", "Azure Bastion"],
+      "correct": "Just-in-Time VM access with certificate-based authentication",
+      "explanation": "JIT access combined with certificate-based authentication enhances security for VM access."
+    },
+    {
+      "id": 183,
+      "question": "You want to ensure that a VM is deployed in a region with the lowest latency for your users. What should you use?",
+      "options": ["Azure Front Door", "Traffic Manager", "Azure Advisor", "Latency Test Tool"],
+      "correct": "Latency Test Tool",
+      "explanation": "Azure’s latency test tools help identify the region with the best performance for your users."
+    },
+    {
+      "id": 184,
+      "question": "You need to ensure that a VM is automatically deleted after 30 days. What should you configure?",
+      "options": ["Azure Automation with scheduled runbook", "Azure Policy", "Azure Monitor", "Azure Advisor"],
+      "correct": "Azure Automation with scheduled runbook",
+      "explanation": "Azure Automation can schedule tasks like deleting resources after a set period."
+    },
+    {
+      "id": 185,
+      "question": "You want to ensure that a VM is deployed only if the subscription has less than 10 VMs. What should you use?",
+      "options": ["Azure Policy with a custom rule", "ARM template", "Azure Monitor", "Azure Advisor"],
+      "correct": "Azure Policy with a custom rule",
+      "explanation": "Custom Azure Policies can enforce deployment conditions based on resource count."
+    }
+  ]
+}

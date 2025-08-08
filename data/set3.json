@@ -1,0 +1,351 @@
+[
+  {
+    "id": 63,
+    "question": "You need to configure load balancing for a web application hosted on multiple virtual machines. What should you use?",
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Front Door"
+    ],
+    "correct": "Azure Load Balancer",
+    "explanation": "Azure Load Balancer distributes traffic across VMs in a single region."
+  },
+  {
+    "id": 64,
+    "question": "You need to configure global load balancing for a web application hosted in multiple regions. What should you use?",
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Front Door"
+    ],
+    "correct": "Azure Traffic Manager",
+    "explanation": "Traffic Manager provides DNS-based global load balancing."
+  },
+  {
+    "id": 65,
+    "question": "You need to configure SSL termination and cookie-based session affinity for a web application. What should you use?",
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Front Door"
+    ],
+    "correct": "Azure Application Gateway",
+    "explanation": "Application Gateway supports SSL termination and session affinity."
+  },
+  {
+    "id": 66,
+    "question": "You need to configure web application firewall (WAF) capabilities for a web application. What should you use?",
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Front Door"
+    ],
+    "correct": "Azure Application Gateway",
+    "explanation": "Application Gateway includes WAF functionality."
+  },
+  {
+    "id": 67,
+    "question": "You need to configure load balancing for a web application hosted in multiple regions with SSL offloading. What should you use?",
+    "options": [
+      "Azure Traffic Manager",
+      "Azure Load Balancer",
+      "Azure Application Gateway",
+      "Azure Front Door"
+    ],
+    "correct": "Azure Front Door",
+    "explanation": "Front Door provides global load balancing with SSL offloading."
+  },
+  {
+    "id": 68,
+    "question": "You need to deploy a Kubernetes cluster in Azure. What should you use?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
+    "correct": "Azure Kubernetes Service",
+    "explanation": "AKS is the managed Kubernetes service in Azure."
+  },
+  {
+    "id": 69,
+    "question": "You need to deploy a containerized application without managing infrastructure. What should you use?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
+    "correct": "Azure Container Instances",
+    "explanation": "ACI allows quick deployment of containers without orchestration overhead."
+  },
+  {
+    "id": 70,
+    "question": "You need to deploy a web application with built-in scaling and custom domains. What should you use?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
+    "correct": "Azure App Service",
+    "explanation": "App Service supports web apps with scaling, custom domains, and SSL."
+  },
+  {
+    "id": 71,
+    "question": "You need to deploy a serverless function that responds to HTTP requests. What should you use?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
+    "correct": "Azure Functions",
+    "explanation": "Azure Functions is ideal for event-driven, serverless workloads."
+  },
+  {
+    "id": 72,
+    "question": "You need to deploy a containerized web app with CI/CD integration. What should you use?",
+    "options": [
+      "Azure Container Instances",
+      "Azure Kubernetes Service",
+      "Azure App Service",
+      "Azure Functions"
+    ],
+    "correct": "Azure App Service",
+    "explanation": "App Service supports containerized apps and integrates with CI/CD pipelines."
+  },
+  {
+    "id": 73,
+    "question": "You need to deploy a scalable web application with automatic scaling based on CPU usage. What should you use?",
+    "options": [
+      "Azure App Service",
+      "Azure Functions",
+      "Azure Virtual Machine Scale Sets",
+      "Azure Kubernetes Service"
+    ],
+    "correct": "Azure Virtual Machine Scale Sets",
+    "explanation": "VMSS automatically scales VMs based on metrics like CPU usage."
+  },
+  {
+    "id": 74,
+    "question": "You need to deploy a DNS zone for your domain in Azure. What should you use?",
+    "options": [
+      "Azure DNS",
+      "Azure Traffic Manager",
+      "Azure Front Door",
+      "Azure Application Gateway"
+    ],
+    "correct": "Azure DNS",
+    "explanation": "Azure DNS hosts and manages DNS zones and records."
+  },
+  {
+    "id": 75,
+    "question": "You need to configure name resolution between virtual networks. What should you use?",
+    "options": [
+      "Azure DNS Private Resolver",
+      "Azure Traffic Manager",
+      "Azure Front Door",
+      "Azure Application Gateway"
+    ],
+    "correct": "Azure DNS Private Resolver",
+    "explanation": "Private Resolver enables DNS resolution across VNets."
+  },
+  {
+    "id": 76,
+    "question": "You need to securely connect to a virtual machine without exposing it to the public internet. What should you use?",
+    "options": [
+      "Azure Bastion",
+      "Azure VPN Gateway",
+      "Azure Firewall",
+      "Azure Application Gateway"
+    ],
+    "correct": "Azure Bastion",
+    "explanation": "Azure Bastion provides secure RDP/SSH access without public IPs."
+  },
+  {
+    "id": 77,
+    "question": "You need to allow HTTP traffic to a virtual machine. What should you configure?",
+    "options": [
+      "Network Security Group",
+      "Azure Firewall",
+      "Azure Bastion",
+      "Azure VPN Gateway"
+    ],
+    "correct": "Network Security Group",
+    "explanation": "NSGs control inbound and outbound traffic to VMs."
+  },
+  {
+    "id": 78,
+    "question": "You need to block all outbound traffic from a subnet except to a specific IP. What should you configure?",
+    "options": [
+      "Network Security Group",
+      "Azure Firewall",
+      "Azure Bastion",
+      "Azure VPN Gateway"
+    ],
+    "correct": "Network Security Group",
+    "explanation": "NSGs can restrict outbound traffic to specific destinations."
+  },
+  {
+    "id": 79,
+    "question": "You need to inspect and filter traffic between subnets. What should you use?",
+    "options": [
+      "Azure Firewall",
+      "Network Security Group",
+      "Azure Bastion",
+      "Azure VPN Gateway"
+    ],
+    "correct": "Azure Firewall",
+    "explanation": "Azure Firewall provides deep packet inspection and filtering."
+  },
+  {
+    "id": 80,
+    "question": "You need to allow traffic between two virtual networks. What should you configure?",
+    "options": [
+      "VNet Peering",
+      "Azure VPN Gateway",
+      "Azure Bastion",
+      "Azure Firewall"
+    ],
+    "correct": "VNet Peering",
+    "explanation": "VNet Peering enables direct communication between VNets."
+  },
+  {
+    "id": 81,
+    "question": "You need to connect an on-premises network to Azure securely. What should you use?",
+    "options": [
+      "Azure VPN Gateway",
+      "Azure Bastion",
+      "Azure Firewall",
+      "VNet Peering"
+    ],
+    "correct": "Azure VPN Gateway",
+    "explanation": "VPN Gateway provides secure site-to-site connectivity."
+  },
+  {
+    "id": 82,
+    "question": "You need to connect multiple on-premises sites to Azure with high availability. What should you use?",
+    "options": [
+      "Azure ExpressRoute",
+      "Azure VPN Gateway",
+      "Azure Bastion",
+      "Azure Firewall"
+    ],
+    "correct": "Azure ExpressRoute",
+    "explanation": "ExpressRoute offers private, high-throughput connections to Azure."
+  },
+  {
+    "id": 83,
+    "question": "You have a registered DNS domain named contoso.com. You create a public Azure DNS zone named contoso.com. You need to ensure that records created in the contoso.com zone are resolvable from the internet. What should you do?",
+    "options": [
+      "Create an A record",
+      "Create a CNAME record",
+      "Modify the NS records in the DNS domain registrar",
+      "Enable zone transfer"
+    ],
+    "correct": "Modify the NS records in the DNS domain registrar",
+    "explanation": "To make Azure DNS zone records resolvable, you must update the NS records at the domain registrar."
+  },
+  {
+    "id": 84,
+    "question": "You need to solve a configuration issue in your Azure environment. What should you do?",
+    "options": [
+      "Use Azure Advisor",
+      "Use Azure Monitor",
+      "Use Azure Resource Graph",
+      "Use Azure Policy"
+    ],
+    "correct": "Use Azure Advisor",
+    "explanation": "Azure Advisor provides recommendations to improve performance, security, and reliability."
+  },
+  {
+    "id": 85,
+    "question": "You have an Azure subscription named Subscription1 that contains a virtual network VNet1. You add the users in the following table. Which user can perform each configuration?",
+    "options": [
+      "User1 only",
+      "User2 only",
+      "User3 only",
+      "User1 and User3 only"
+    ],
+    "correct": "User1 and User3 only",
+    "explanation": "Only users with appropriate roles can configure network resources."
+  },
+  {
+    "id": 86,
+    "question": "You plan to track resource usage and prevent the deletion of resources. To which resources can you apply locks and tags?",
+    "options": [
+      "Subscription only",
+      "Resource group only",
+      "Virtual machine only",
+      "Subscription, resource group, and virtual machine"
+    ],
+    "correct": "Subscription, resource group, and virtual machine",
+    "explanation": "Locks and tags can be applied at multiple levels for governance and protection."
+  },
+  {
+    "id": 87,
+    "question": "You plan to bulk delete users in Azure Active Directory. Which user attributes should you include in the file?",
+    "options": [
+      "User principal name only",
+      "Display name and email",
+      "Object ID and email",
+      "Email and department"
+    ],
+    "correct": "User principal name only",
+    "explanation": "Bulk delete requires only the user principal name for identification."
+  },
+  {
+    "id": 88,
+    "question": "You assign an Azure policy with the following settings: Scope: Sub1, Exclusions: Sub1/RG1/VNET1, Policy definition: Append a tag and its value to resources. Policy enforcement: Enabled. Tag name: Tag4. Tag value: value4. You assign tags to the resources as shown in the following table. For each of the following statements, select Yes if the statement is true. Otherwise, select No.",
+    "options": [
+      "All resources receive Tag4",
+      "Only RG1 receives Tag4",
+      "No resources receive Tag4"
+    ],
+    "correct": "No resources receive Tag4",
+    "explanation": "Exclusions prevent the policy from applying to RG1/VNET1."
+  },
+  {
+    "id": 89,
+    "question": "You need to ensure that an Azure AD user named Admin1 is assigned the required role to enable Traffic Analytics for an Azure subscription. Solution: You assign the Traffic Manager Contributor role at the subscription level to Admin1. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "No",
+    "explanation": "Traffic Manager Contributor does not grant permissions for Traffic Analytics."
+  },
+  {
+    "id": 90,
+    "question": "You have three offices and an Azure subscription that contains an Azure AD tenant. You need to grant user management permissions to a local administrator in each office. What should you use?",
+    "options": [
+      "Azure AD roles",
+      "Administrative Units",
+      "Resource groups",
+      "Management groups"
+    ],
+    "correct": "Administrative Units",
+    "explanation": "Administrative Units allow scoped role assignments for user management."
+  },
+  {
+    "id": 91,
+    "question": "You need to provide the Developers group with the ability to create Azure logic apps in the Dev resource group. Solution: On Dev, you assign the Logic App Contributor role to the Developers group. Does this meet the goal?",
+    "options": ["Yes", "No"],
+    "correct": "Yes",
+    "explanation": "Logic App Contributor allows creation and management of logic apps."
+  },
+  {
+    "id": 92,
+    "question": "You have an Azure Load Balancer named LB1. You assign a user named User1 the roles shown in the exhibit. Can User1 assign access to other users for LB1 and delete the VM from the resource group?",
+    "options": [
+      "Assign access: Yes, Delete VM: Yes",
+      "Assign access: No, Delete VM: Yes",
+      "Assign access: Yes, Delete VM: No",
+      "Assign access: No, Delete VM: No"
+    ],
+    "correct": "Assign access: Yes, Delete VM: Yes",
+    "explanation": "User1 has sufficient permissions to manage access and delete resources."
+  }
+]

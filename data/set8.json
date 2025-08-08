@@ -1,0 +1,362 @@
+{
+  "questions": [
+    {
+      "id": 301,
+      "question": "You want to ensure that a VM is deployed only in approved regions. What should you configure?",
+      "options": ["Azure Policy", "Azure Monitor", "Azure Advisor", "ARM template"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can restrict resource deployment to specific regions for compliance."
+    },
+    {
+      "id": 302,
+      "question": "You need to ensure that a VM is restarted if CPU usage drops below 5% for 30 minutes. What should you configure?",
+      "options": ["Azure Monitor alert with action group", "Azure Policy", "Azure Advisor", "Azure Automation"],
+      "correct": "Azure Monitor alert with action group",
+      "explanation": "Azure Monitor can trigger actions based on performance metrics like CPU usage."
+    },
+    {
+      "id": 303,
+      "question": "You want to ensure that a VM is deployed with a specific naming convention. What should you use?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce naming conventions for resources."
+    },
+    {
+      "id": 304,
+      "question": "You need to ensure that a VM is not deployed if it lacks a backup policy. What should you configure?",
+      "options": ["Azure Policy", "Azure Monitor", "Azure Advisor", "Azure Automation"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can audit or deny resource creation based on backup configuration."
+    },
+    {
+      "id": 305,
+      "question": "You want to ensure that a VM is deployed with a specific OS image version. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to specify exact OS image versions during deployment."
+    },
+    {
+      "id": 306,
+      "question": "You need to ensure that a VM is deployed with encryption enabled. What should you configure?",
+      "options": ["Azure Policy", "Azure Monitor", "Azure Advisor", "Azure Automation"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce encryption settings on VM disks."
+    },
+    {
+      "id": 307,
+      "question": "You want to ensure that a VM is deployed with a managed identity. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can include managed identity configuration during deployment."
+    },
+    {
+      "id": 308,
+      "question": "You need to ensure that a VM is deployed with diagnostic settings enabled. What should you configure?",
+      "options": ["Azure Policy", "Azure Monitor", "Azure Advisor", "Azure Automation"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce diagnostic settings for monitoring and compliance."
+    },
+    {
+      "id": 309,
+      "question": "You want to ensure that a VM is deployed with a specific SKU. What should you use?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can restrict allowed SKUs for VM deployment."
+    },
+    {
+      "id": 310,
+      "question": "You need to ensure that a VM is deployed with a specific network configuration. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow detailed specification of network settings during deployment."
+    },
+    {
+      "id": 311,
+      "question": "You want to ensure that a VM is deployed with a specific disk type. What should you configure?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce disk type requirements for VM deployments."
+    },
+    {
+      "id": 312,
+      "question": "You need to ensure that a VM is deployed with a specific resource group naming convention. What should you use?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce naming conventions for resource groups."
+    },
+    {
+      "id": 313,
+      "question": "You want to ensure that a VM is deployed with a specific virtual network. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to specify the virtual network during deployment."
+    },
+    {
+      "id": 314,
+      "question": "You need to ensure that a VM is deployed with a specific subnet. What should you configure?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can define subnet placement for VMs."
+    },
+    {
+      "id": 315,
+      "question": "You want to ensure that a VM is deployed with a specific NSG. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can associate NSGs with VM network interfaces."
+    },
+    {
+      "id": 316,
+      "question": "You need to ensure that a VM is deployed with a specific public IP configuration. What should you configure?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to define public IP settings during deployment."
+    },
+    {
+      "id": 317,
+      "question": "You want to ensure that a VM is deployed with a specific DNS configuration. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can include DNS settings for VM network interfaces."
+    },
+    {
+      "id": 318,
+      "question": "You need to ensure that a VM is deployed with a specific boot diagnostics configuration. What should you configure?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can enable and configure boot diagnostics for VMs."
+    },
+    {
+      "id": 319,
+      "question": "You want to ensure that a VM is deployed with a specific backup policy. What should you use?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce backup configurations for VM deployments."
+    },
+    {
+      "id": 320,
+      "question": "You need to ensure that a VM is deployed with a specific monitoring agent. What should you configure?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can include extensions to install monitoring agents during deployment."
+    },
+    {
+      "id": 321,
+      "question": "You want to ensure that a VM is deployed with a specific availability zone. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to specify the availability zone for VM deployment."
+    },
+    {
+      "id": 322,
+      "question": "You need to ensure that a VM is deployed with a specific fault domain. What should you configure?",
+      "options": ["Availability Set", "ARM template", "Azure Policy", "Azure Advisor"],
+      "correct": "Availability Set",
+      "explanation": "Availability Sets distribute VMs across fault domains for high availability."
+    },
+    {
+      "id": 323,
+      "question": "You want to ensure that a VM is deployed with a specific update domain. What should you use?",
+      "options": ["Availability Set", "ARM template", "Azure Policy", "Azure Advisor"],
+      "correct": "Availability Set",
+      "explanation": "Availability Sets also manage update domains to reduce downtime during maintenance."
+    },
+    {
+      "id": 324,
+      "question": "You need to ensure that a VM is deployed with a specific extension. What should you configure?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates can include VM extensions for configuration and management."
+    },
+
+    {
+      "id": 325,
+      "question": "You want to ensure that a VM is deployed with a specific license type. What should you use?",
+      "options": ["ARM template", "Azure Policy", "Azure CLI", "Azure Advisor"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to specify license types like Windows Server with Hybrid Use Benefit."
+    },
+    {
+      "id": 326,
+      "question": "You need to ensure that a VM is deployed with a specific time zone setting. What should you configure?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Time zone settings can be configured using a script executed via the Custom Script Extension."
+    },
+    {
+      "id": 327,
+      "question": "You want to ensure that a VM is deployed with a specific locale and language pack. What should you use?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Locale and language settings are typically applied via post-deployment scripts."
+    },
+    {
+      "id": 328,
+      "question": "You need to ensure that a VM is deployed with a specific antivirus solution. What should you configure?",
+      "options": ["VM Extension", "Azure Policy", "Azure Monitor", "Azure Advisor"],
+      "correct": "VM Extension",
+      "explanation": "Antivirus software can be installed using VM extensions during or after deployment."
+    },
+    {
+      "id": 329,
+      "question": "You want to ensure that a VM is deployed with a specific patching schedule. What should you use?",
+      "options": ["Update Management", "Azure Policy", "ARM template", "Azure Monitor"],
+      "correct": "Update Management",
+      "explanation": "Update Management allows you to define patching schedules for VMs."
+    },
+    {
+      "id": 330,
+      "question": "You need to ensure that a VM is deployed with a specific domain join configuration. What should you configure?",
+      "options": ["VM Extension", "ARM template", "Azure AD DS", "Azure Policy"],
+      "correct": "VM Extension",
+      "explanation": "Domain join can be automated using the 'JoinDomain' extension in ARM templates."
+    },
+    {
+      "id": 331,
+      "question": "You want to ensure that a VM is deployed with a specific startup task. What should you use?",
+      "options": ["Custom Script Extension", "Azure Policy", "ARM template", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Startup tasks can be configured using scripts executed via VM extensions."
+    },
+    {
+      "id": 332,
+      "question": "You need to ensure that a VM is deployed with a specific registry setting. What should you configure?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Registry settings can be applied using PowerShell scripts via the Custom Script Extension."
+    },
+    {
+      "id": 333,
+      "question": "You want to ensure that a VM is deployed with a specific scheduled task. What should you use?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure Monitor"],
+      "correct": "Custom Script Extension",
+      "explanation": "Scheduled tasks can be created using scripts during deployment."
+    },
+    {
+      "id": 334,
+      "question": "You need to ensure that a VM is deployed with a specific firewall configuration. What should you configure?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Firewall", "Azure Policy"],
+      "correct": "Custom Script Extension",
+      "explanation": "Windows Firewall settings can be configured via PowerShell scripts during deployment."
+    },
+    {
+      "id": 335,
+      "question": "You want to ensure that a VM is deployed with a specific performance tuning configuration. What should you use?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure Advisor"],
+      "correct": "Custom Script Extension",
+      "explanation": "Performance tuning can be applied using scripts that modify system settings."
+    },
+    {
+      "id": 336,
+      "question": "You need to ensure that a VM is deployed with a specific logging configuration. What should you configure?",
+      "options": ["Diagnostic Extension", "ARM template", "Azure Policy", "Azure Monitor"],
+      "correct": "Diagnostic Extension",
+      "explanation": "Diagnostic extensions enable logging and telemetry for VMs."
+    },
+    {
+      "id": 337,
+      "question": "You want to ensure that a VM is deployed with a specific boot order. What should you use?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Boot order can be influenced by startup scripts or BIOS settings configured via extensions."
+    },
+    {
+      "id": 338,
+      "question": "You need to ensure that a VM is deployed with a specific disk encryption key. What should you configure?",
+      "options": ["Azure Key Vault", "ARM template", "Azure Policy", "Azure Monitor"],
+      "correct": "Azure Key Vault",
+      "explanation": "Disk encryption keys can be securely stored and referenced from Azure Key Vault."
+    },
+    {
+      "id": 339,
+      "question": "You want to ensure that a VM is deployed with a specific certificate. What should you use?",
+      "options": ["Azure Key Vault", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Azure Key Vault",
+      "explanation": "Certificates can be securely stored in Key Vault and injected into VMs during deployment."
+    },
+    {
+      "id": 340,
+      "question": "You need to ensure that a VM is deployed with a specific environment variable. What should you configure?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Custom Script Extension",
+      "explanation": "Environment variables can be set using startup scripts executed via extensions."
+    },
+    {
+      "id": 341,
+      "question": "You want to ensure that a VM is deployed with a specific user account. What should you use?",
+      "options": ["ARM template", "Custom Script Extension", "Azure Policy", "Azure CLI"],
+      "correct": "ARM template",
+      "explanation": "ARM templates allow you to define admin usernames and credentials during deployment."
+    },
+    {
+      "id": 342,
+      "question": "You need to ensure that a VM is deployed with a specific password policy. What should you configure?",
+      "options": ["Custom Script Extension", "Azure AD DS", "ARM template", "Azure Policy"],
+      "correct": "Custom Script Extension",
+      "explanation": "Password policies can be enforced via scripts or domain group policies."
+    },
+    {
+      "id": 343,
+      "question": "You want to ensure that a VM is deployed with a specific group membership. What should you use?",
+      "options": ["Custom Script Extension", "Azure AD DS", "ARM template", "Azure Policy"],
+      "correct": "Custom Script Extension",
+      "explanation": "Group membership can be configured using scripts that modify local or domain groups."
+    },
+    {
+      "id": 344,
+      "question": "You need to ensure that a VM is deployed with a specific scheduled reboot time. What should you configure?",
+      "options": ["Custom Script Extension", "Azure Automation", "ARM template", "Azure Policy"],
+      "correct": "Azure Automation",
+      "explanation": "Azure Automation can schedule reboots using runbooks and time-based triggers."
+    },
+    {
+      "id": 345,
+      "question": "You want to ensure that a VM is deployed with a specific telemetry agent. What should you use?",
+      "options": ["Diagnostic Extension", "ARM template", "Azure Policy", "Azure CLI"],
+      "correct": "Diagnostic Extension",
+      "explanation": "Telemetry agents are installed using diagnostic extensions during deployment."
+    },
+    {
+      "id": 346,
+      "question": "You need to ensure that a VM is deployed with a specific registry key for compliance. What should you configure?",
+      "options": ["Custom Script Extension", "ARM template", "Azure Policy", "Azure Monitor"],
+      "correct": "Custom Script Extension",
+      "explanation": "Registry keys can be set using PowerShell scripts executed via VM extensions."
+    },
+    {
+      "id": 347,
+      "question": "You want to ensure that a VM is deployed with a specific audit configuration. What should you use?",
+      "options": ["Diagnostic Extension", "Azure Policy", "ARM template", "Azure Monitor"],
+      "correct": "Diagnostic Extension",
+      "explanation": "Audit settings can be enabled using diagnostic extensions for compliance tracking."
+    },
+    {
+      "id": 348,
+      "question": "You need to ensure that a VM is deployed with a specific security baseline. What should you configure?",
+      "options": ["Azure Policy", "Azure Security Center", "ARM template", "Azure Monitor"],
+      "correct": "Azure Security Center",
+      "explanation": "Azure Security Center provides built-in security baselines and recommendations for VMs."
+    },
+    {
+      "id": 349,
+      "question": "You want to ensure that a VM is deployed with a specific compliance tag. What should you use?",
+      "options": ["Azure Policy", "ARM template", "Azure CLI", "Azure Advisor"],
+      "correct": "Azure Policy",
+      "explanation": "Azure Policy can enforce tagging for compliance and governance."
+    },
+    {
+      "id": 350,
+      "question": "You need to ensure that a VM is deployed with a specific retention policy for logs. What should you configure?",
+      "options": ["Azure Monitor Diagnostic Settings", "Azure Policy", "ARM template", "Azure CLI"],
+      "correct": "Azure Monitor Diagnostic Settings",
+      "explanation": "Diagnostic settings allow you to configure log retention and export to storage or Log Analytics."
+    },
+    {
+      "id": 351,
+      "question": "You want to ensure that a VM is deployed with a specific lifecycle policy for automatic deletion after 90 days. What should you use?",
+      "options": ["Azure Automation with scheduled runbook", "Azure Policy", "ARM template", "Azure Monitor"],
+      "correct": "Azure Automation with scheduled runbook",
+      "explanation": "Azure Automation can schedule resource cleanup tasks like VM deletion based on lifecycle rules."
+    }
+  ]
+}

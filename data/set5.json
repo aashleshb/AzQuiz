@@ -1,0 +1,242 @@
+[
+  {
+    "id": 116,
+    "question": "You need to ensure that a virtual machine can securely access an Azure Storage account without exposing it to the public internet. What should you configure?",
+    "options": [
+      "Service Endpoint",
+      "Private Endpoint",
+      "Public IP with NSG",
+      "Shared Access Signature (SAS)"
+    ],
+    "correct": "Private Endpoint",
+    "explanation": "Private Endpoints allow secure access to Azure services over a private IP address within your virtual network."
+  },
+  {
+    "id": 117,
+    "question": "You want to allow users to reset their own passwords in Azure AD. What should you enable?",
+    "options": [
+      "Azure AD Identity Protection",
+      "Self-service password reset",
+      "Azure AD Privileged Identity Management",
+      "Azure AD B2C"
+    ],
+    "correct": "Self-service password reset",
+    "explanation": "Self-service password reset enables users to securely reset their own passwords without admin intervention."
+  },
+  {
+    "id": 118,
+    "question": "You need to ensure that only traffic from a specific IP range can access a web app. What should you configure?",
+    "options": [
+      "Azure Firewall",
+      "Web Application Firewall (WAF)",
+      "Access Restrictions",
+      "Application Gateway"
+    ],
+    "correct": "Access Restrictions",
+    "explanation": "Access Restrictions allow you to define IP-based rules directly on the web app to control inbound traffic."
+  },
+  {
+    "id": 119,
+    "question": "You want to monitor the performance and availability of an Azure web app. Which service should you use?",
+    "options": [
+      "Azure Monitor",
+      "Azure Advisor",
+      "Azure Policy",
+      "Azure Security Center"
+    ],
+    "correct": "Azure Monitor",
+    "explanation": "Azure Monitor provides metrics, logs, and alerts to track performance and availability of resources."
+  },
+  {
+    "id": 120,
+    "question": "You need to ensure that a user can manage RBAC permissions for a specific resource. Which role should you assign?",
+    "options": [
+      "Owner",
+      "Contributor",
+      "User Access Administrator",
+      "Reader"
+    ],
+    "correct": "User Access Administrator",
+    "explanation": "User Access Administrator can manage role assignments without full resource control."
+  },
+  {
+    "id": 121,
+    "question": "You want to automate the deployment of multiple Azure resources using a declarative syntax. What should you use?",
+    "options": [
+      "Azure CLI",
+      "ARM templates",
+      "Azure PowerShell",
+      "Azure Portal"
+    ],
+    "correct": "ARM templates",
+    "explanation": "ARM templates use JSON to define infrastructure as code for consistent deployments."
+  },
+  {
+    "id": 122,
+    "question": "You need to ensure that virtual machines in a scale set are distributed across fault domains. What should you configure?",
+    "options": [
+      "Availability Zones",
+      "Availability Set",
+      "Update Domain Count",
+      "PlatformFaultDomainCount"
+    ],
+    "correct": "Availability Zones",
+    "explanation": "Availability Zones provide high availability by distributing VMs across physically separate datacenters."
+  },
+  {
+    "id": 123,
+    "question": "You want to enforce encryption of all data stored in Azure SQL Database. What should you enable?",
+    "options": [
+      "Transparent Data Encryption (TDE)",
+      "Always Encrypted",
+      "Azure Defender",
+      "SQL Auditing"
+    ],
+    "correct": "Transparent Data Encryption (TDE)",
+    "explanation": "TDE automatically encrypts data at rest in Azure SQL Database."
+  },
+  {
+    "id": 124,
+    "question": "You need to ensure that only approved Azure Marketplace images can be deployed in your subscription. What should you use?",
+    "options": [
+      "Azure Policy",
+      "Azure Blueprints",
+      "Management Groups",
+      "RBAC"
+    ],
+    "correct": "Azure Policy",
+    "explanation": "Azure Policy can restrict resource deployment based on allowed image types."
+  },
+  {
+    "id": 125,
+    "question": "You want to allow users to request temporary access to privileged roles in Azure AD. What should you configure?",
+    "options": [
+      "Azure AD Identity Protection",
+      "Azure AD Conditional Access",
+      "Azure AD Privileged Identity Management (PIM)",
+      "Azure AD Connect"
+    ],
+    "correct": "Azure AD Privileged Identity Management (PIM)",
+    "explanation": "PIM enables just-in-time access to privileged roles with approval workflows and auditing."
+  },
+  {
+    "id": 126,
+    "question": "You need to ensure that users can only access Azure resources if they sign in from a compliant device. What should you configure?",
+    "options": [
+      "Azure AD Conditional Access",
+      "Azure AD Identity Protection",
+      "Azure AD Privileged Identity Management",
+      "Azure Policy"
+    ],
+    "correct": "Azure AD Conditional Access",
+    "explanation": "Conditional Access policies can enforce device compliance as part of access requirements."
+  },
+  {
+    "id": 127,
+    "question": "You want to allow users to request access to Azure AD roles for a limited time. What should you use?",
+    "options": [
+      "Azure AD Identity Protection",
+      "Azure AD Privileged Identity Management (PIM)",
+      "Azure AD Connect",
+      "Azure AD B2C"
+    ],
+    "correct": "Azure AD Privileged Identity Management (PIM)",
+    "explanation": "PIM enables just-in-time role activation with approval workflows and auditing."
+  },
+  {
+    "id": 128,
+    "question": "You need to allow HTTP traffic to a VM but block all other inbound traffic. What should you configure?",
+    "options": [
+      "Application Gateway",
+      "Network Security Group (NSG)",
+      "Azure Firewall",
+      "Route Table"
+    ],
+    "correct": "Network Security Group (NSG)",
+    "explanation": "NSGs allow you to define granular inbound and outbound rules for traffic control."
+  },
+  {
+    "id": 129,
+    "question": "You want to ensure that traffic between two virtual networks is routed securely and efficiently. What should you use?",
+    "options": [
+      "Virtual Network Peering",
+      "VPN Gateway",
+      "ExpressRoute",
+      "Azure Bastion"
+    ],
+    "correct": "Virtual Network Peering",
+    "explanation": "Peering enables low-latency, high-bandwidth connectivity between virtual networks."
+  },
+  {
+    "id": 130,
+    "question": "You need to ensure that deleted blobs in a storage account can be recovered for up to 30 days. What should you enable?",
+    "options": [
+      "Soft Delete",
+      "Immutable Blob Storage",
+      "Geo-redundant Storage",
+      "Azure Backup"
+    ],
+    "correct": "Soft Delete",
+    "explanation": "Soft Delete preserves deleted blobs for a configurable retention period."
+  },
+  {
+    "id": 131,
+    "question": "You want to restrict access to a storage account to specific virtual networks. What should you configure?",
+    "options": [
+      "Private Endpoint",
+      "Shared Access Signature",
+      "Service Endpoint",
+      "Access Keys"
+    ],
+    "correct": "Private Endpoint",
+    "explanation": "Private Endpoints restrict access to Azure services over a private IP within your VNet."
+  },
+  {
+    "id": 132,
+    "question": "You want to ensure that only approved VM sizes are used in your subscription. What should you implement?",
+    "options": [
+      "Azure Policy",
+      "Azure Blueprints",
+      "Management Groups",
+      "RBAC"
+    ],
+    "correct": "Azure Policy",
+    "explanation": "Azure Policy can restrict resource configurations, including allowed VM sizes."
+  },
+  {
+    "id": 133,
+    "question": "You need to apply consistent resource configurations across multiple subscriptions. What should you use?",
+    "options": [
+      "Azure Blueprints",
+      "Azure Policy",
+      "ARM Templates",
+      "Azure Resource Groups"
+    ],
+    "correct": "Azure Blueprints",
+    "explanation": "Blueprints allow you to package policies, role assignments, and templates for consistent deployment."
+  },
+  {
+    "id": 134,
+    "question": "You want to receive alerts when CPU usage on a VM exceeds 80%. What should you configure?",
+    "options": [
+      "Azure Monitor",
+      "Azure Advisor",
+      "Azure Policy",
+      "Azure Security Center"
+    ],
+    "correct": "Azure Monitor",
+    "explanation": "Azure Monitor can track metrics and trigger alerts based on thresholds."
+  },
+  {
+    "id": 135,
+    "question": "You need to identify underutilized resources to reduce costs. What should you use?",
+    "options": [
+      "Azure Advisor",
+      "Azure Monitor",
+      "Azure Cost Management",
+      "Azure Policy"
+    ],
+    "correct": "Azure Advisor",
+    "explanation": "Azure Advisor provides recommendations for cost optimization and performance improvements."
+  }
+]

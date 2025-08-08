@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Azure Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f6f8;
+        }
+        h2, h3 {
+            color: #333;
+        }
+        .question-block {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .feedback {
+            background-color: #eef;
+            padding: 15px;
+            border-left: 5px solid #88f;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        .correct { color: green; }
+        .incorrect { color: red; }
+        .error {
+            color: darkred;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            margin: 8px 0;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Question {{ current_index + 1 }} of {{ total_questions }}</h2>
+
+    <div class="question-block">
+        <h3>Q{{ question.id }}: {{ question.question }}</h3>
+
+        <form method="post" autocomplete="off">
+            {% if question.options %}
+                {% for opt in question.options %}
+                    <label>
+                        <input type="checkbox" name="selected_options" value="{{ opt }}"
+                               {% if feedback %}disabled{% endif %}>
+                        {{ opt }}
+                    </label>
+                {% endfor %}
+            {% else %}
+                <p class="error">⚠️ No options available for this question.</p>
+            {% endif %}
+
+            {% if feedback %}
+                <div class="feedback">
+                    {% if feedback.error %}
+                        <p class="error">⚠️ {{ feedback.error }}</p>
+                    {% elif feedback.is_correct %}
+                        <p class="correct">✅ Correct!</p>
+                    {% else %}
+                        <p class="incorrect">❌ Incorrect. Correct answers:
+                            <strong>{{ feedback.correct | join(', ') }}</strong>
+                        </p>
+                    {% endif %}
+                    {% if feedback.explanation %}
+                        <p><strong>Explanation:</strong> {{ feedback.explanation }}</p>
+                    {% endif %}
+                </div>
+                <input type="hidden" name="action" value="next">
+                <button type="submit">Next</button>
+            {% else %}
+                <input type="hidden" name="action" value="submit">
+                <button type="submit">Submit</button>
+            {% endif %}
+        </form>
+    </div>
+
+</body>
+</html>

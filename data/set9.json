@@ -1,0 +1,20 @@
+[
+  {"id": 10,
+  "question": "Given the following role assignments, who has Owner permissions?",
+  "table": {
+    "headers": ["User", "Role"],
+    "rows": [
+      ["User1", "Read"],
+      ["User2", "Read and Write"],
+      ["User3", "Owner"]
+    ]
+  },
+  "options": [
+    "User1",
+    "User2",
+    "User3"
+  ],
+  "correct": "User3",
+  "explanation": "User3 has the Owner role which grants full permissions."
+  }
+]

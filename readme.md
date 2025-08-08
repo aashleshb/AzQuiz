@@ -1,51 +1,59 @@
-📘 README.md for Azure 104 Quiz App
-markdown
-# Azure 104 Quiz App 🧠
+# AzQuiz 🧠  
+**Your personal Azure AZ-104 exam practice app**  
 
-An interactive desktop quiz application built with Python and Tkinter to help users prepare for the **Microsoft Azure Administrator (AZ-104)** certification. Supports multiple question sets, progress tracking, review mode, and pass/fail evaluation.
+AzQuiz is an interactive quiz application built in Python to help you prepare for the **Microsoft Azure Administrator (AZ-104)** certification.  
+It provides a clean interface, multiple question sets, progress tracking, review mode, and automatic scoring with pass/fail evaluation.  
 
 ---
 
 ## 🚀 Features
-
-- ✅ Multiple question sets (JSON-based)
-- 🔀 Optional shuffling of questions and options
-- 📊 Progress indicator (e.g. "Question 3 of 20")
-- 🧠 Instant feedback with explanations
-- 📋 Scrollable review screen with color-coded answers
-- 🎯 Final score with pass/fail status
+- **Multiple question sets** (stored in JSON format)  
+- **Question & option shuffling** for varied practice  
+- **Progress indicator** (e.g., *Question 5 of 20*)  
+- **Instant feedback** with explanations  
+- **Review mode** with color-coded answers  
+- **Final score & pass/fail result**  
+- **No internet required** — runs locally on your machine  
 
 ---
 
-## 🛠️ Setup
+## 📂 Folder Structure
 
-### 1. Clone the repository
+AzQuiz/
+├── main.py              # Entry point for the application
+├── gui.py               # Graphical interface for quiz mode
+├── cli.py               # Command-line version of the quiz
+├── app.py               # Application logic (web mode)
+├── config.py            # Configurable settings (shuffle, pass rate, etc.)
+├── utils/               # Helper functions
+│   └── loader.py        # Functions to load question files
+├── templates/           # HTML templates for web interface
+│   ├── index.html       # Homepage template
+│   ├── quiz.html        # Quiz page template
+│   ├── review.html      # Review answers page template
+│   └── complete.html    # Quiz completion page template
+├── data/                # JSON files with question sets
+│   ├── set1.json
+│   ├── set2.json
+│   └── …
+└── pycache/         # Python cache files (auto-generated)
 
-```bash
-git clone https://github.com/yourusername/azure-quiz-app.git
-cd azure-quiz-app
-2. Install dependencies
-No external packages required — just Python 3.x.
-3. Folder structure
-azure-quiz-app/
-├── gui.py
-├── config.py
-├── utils/
-│   └── loader.py
-└── data/
-    ├── set1.json
-    ├── set2.json
-    └── ...
-⚙️ Configuration (config.py)
-python
-SHUFFLE_QUESTIONS = True
-SHUFFLE_OPTIONS = True
-SHOW_FEEDBACK = True
-PASS_THRESHOLD = 70  # percentage required to pass
+---
+
+## ⚙️ Configuration
+
+Edit **`config.py`** to customize app behavior:  
+```python
+SHUFFLE_QUESTIONS = True   # Randomize question order
+SHUFFLE_OPTIONS = True     # Randomize answer options
+SHOW_FEEDBACK = True       # Show immediate feedback
+PASS_THRESHOLD = 70        # % required to pass
 DEFAULT_QUESTION_SET = "data/set1.json"
-📦 Question Format (data/setX.json)
-Each question file is a list of objects:
-json
+
+📦 Question Format
+
+Each question set is a JSON file like:
+
 [
   {
     "id": 1,
@@ -53,27 +61,50 @@ json
     "options": ["Azure Blob Storage", "Azure VM", "Azure SQL", "Azure Functions"],
     "correct": "Azure Blob Storage",
     "explanation": "Blob Storage is optimized for storing massive amounts of unstructured data."
-  },
-  ...
+  }
 ]
-correct can be a comma-separated string for multiple correct answers.
-🧪 Running the App
-bash
+
+✅ For multiple correct answers, separate them with commas.
+
+⸻
+
+🖥️ Running the App
+
+Run GUI mode:
 python gui.py
-Select a question set from the dropdown
-Click Start Quiz
-Submit answers and receive feedback
-View final score and review answers
-✨ Customization Ideas
-Add dark mode or themes
-Export results to a file
-Retake quiz button
-Filter incorrect answers in review
-📄 License
-MIT License — free to use, modify, and distribute.
-🙌 Credits
-Built by [Your Name] to support Azure certification learners. Contributions welcome!
 
----
+Run CLI mode:
+python cli.py
 
-Want me to tailor this for a GitHub repo with badges, screenshots, or contributor sections?
+Run Web mode:
+python app.py
+Then open your browser and go to: http://127.0.0.1:5000
+
+📜 Disclaimer
+
+This app is not an official Microsoft product, and the questions included are not official exam questions. They were created based on publicly available learning materials to help with personal study.
+
+I am not a professional app developer — I built this tool to practice AZ-104 questions on my laptop. If you find any issues or mistakes, please feel free to submit corrections or improvements via the GitHub repository.
+
+➕ Adding Your Own Questions
+	1.	Create a new JSON file in data/ (e.g., set9.json)
+	2.	Follow the same format as above
+	3.	Your new set will appear in the app’s set selector automatically
+
+🏁 Summary
+
+AzQuiz is your local study companion for AZ-104.
+Pick your mode (GUI, CLI, or Web), choose a question set, test yourself, review explanations, and get exam-ready.
+
+💡 Quick Commands
+# Start GUI mode
+python gui.py
+
+# Start CLI mode
+python cli.py
+
+# Start Web mode
+python app.py
+
+Good luck with your AZ-104 exam prep!
+Feel free to contribute improvements or additional question sets via GitHub.
